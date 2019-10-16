@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const assertArraysEqual = function(a, b) {
+const assertArraysEquals = function(a, b) {
   if (a.length !== b.length) {
     return false;
   } else {
@@ -28,8 +28,5 @@ function flatten(arr) {
   }, []);
 }
  
-
-
-
-
-console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]))); // => [1, 2, 3, 4, 5, 6];
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6];
+assertArraysEquals(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
