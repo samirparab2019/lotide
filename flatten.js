@@ -7,24 +7,23 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const assertArrayEquals = function(a, b) {
-  
+const assertArraysEqual = function(a, b) {
   if (a.length !== b.length) {
-  return false;
+    return false;
   } else {
-  for (var i = 0; i < a.length; ++i) {
-    if (!assertEqual (a[i], b[i])) {
-      console.log("false");
-      return false;
+    for (let i = 0; i < a.length; ++i) {
+      if (!assertEqual(a[i], b[i])) {
+        console.log("false");
+        return false;
+      }
     }
+    console.log("true");
+    return true;
   }
-  console.log("true");
-  return true;
-}
-}
+};
 
 function flatten(arr) {
-  return arr.reduce(function (flat, toFlatten) {
+  return arr.reduce(function(flat, toFlatten) {
     return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
   }, []);
 }
@@ -33,4 +32,4 @@ function flatten(arr) {
 
 
 
-console.log(flatten([1, 2, [3, 4], 5, [6]])) // => [1, 2, 3, 4, 5, 6];
+console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]))); // => [1, 2, 3, 4, 5, 6];

@@ -1,5 +1,6 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
+  let i = 0;
   for (i = 0; i < actual.length; i++) {
     if (actual[i] === expected[i]) {
       console.log(`${String.fromCodePoint(0x1F600)} Assertion Passed: ${actual[i]} === ${expected[i]}`);

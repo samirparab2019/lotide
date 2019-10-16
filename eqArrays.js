@@ -1,7 +1,7 @@
 const eqArrays = function(a, b) {
   if (a.length !== b.length) return false;
 
-  for (var i = 0; i < a.length; ++i) {
+  for (let i = 0; i < a.length; ++i) {
     if (a[i] !== b[i]) {
       console.log("false");
       return false;
@@ -9,7 +9,7 @@ const eqArrays = function(a, b) {
   }
   console.log("true");
   return true;
-}
+};
 
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
@@ -20,10 +20,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-eqArrays([1, 2, 3], [1, 2, 3]) // => true
-eqArrays([1, 2, 3], [3, 2, 1]) // => false
+eqArrays([1, 2, 3], [1, 2, 3]); // => true
+eqArrays([1, 2, 3], [3, 2, 1]); // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
+eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
+eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
