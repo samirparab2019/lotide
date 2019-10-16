@@ -10,10 +10,10 @@ const assertEqual = function(actual, expected) {
   }
   
 };
-function tail(array1) {
+const tail = function(array1) {
   return array1.slice(1);
-}
+};
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 
-assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
+assertEqual(result, ["Lighthouse", "Labs"]);

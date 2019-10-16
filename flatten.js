@@ -22,11 +22,11 @@ const assertArraysEquals = function(a, b) {
   }
 };
 
-function flatten(arr) {
+const flatten = function(arr) {
   return arr.reduce(function(flat, toFlatten) {
     return flat.concat(Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten);
   }, []);
-}
+};
  
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6];
 assertArraysEquals(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);

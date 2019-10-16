@@ -25,7 +25,7 @@ const assertArrayEquals = function(a, b) {
 
 // ACTUAL FUNCTION
 
-function without(arr1, arr2) {
+const without = function(arr1, arr2) {
   let missings = [];
   let matches = false;
 
@@ -41,7 +41,7 @@ function without(arr1, arr2) {
     }
   }
   return missings;
-}
+};
 
 //...
 

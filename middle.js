@@ -31,6 +31,7 @@ const middle = function(array) {
   const array1 = [];
   if (array.length < 3) {
     //console.log("[]");
+    array1;
   } else if (array.length % 2 === 0) {
     const mid = array.length / 2;
     //console.log(`${array[mid - 1]}, ${array[mid]}`);
