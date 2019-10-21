@@ -23,9 +23,9 @@ const assertObjectsEqual = function(actual, expected) {
   // ...
   //console.log(`Example label: ${inspect(actual)}`);
   if (actual === expected) {
-    console.log(`${String.fromCodePoint(0x1F600)} Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+    console.log(`${String.fromCodePoint(0x1F600)} Assertion Passed: ${(ab)} === ${(ba)}`);
   } else {
-    console.log(`${String.fromCodePoint(0x1F34A)} Assertion Failed: ${actual} !=== ${expected}`);
+    console.log(`${String.fromCodePoint(0x1F34A)} Assertion Failed: ${ab} !=== ${abc}`);
   }
 };
 
