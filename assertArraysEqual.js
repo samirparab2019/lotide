@@ -13,6 +13,8 @@ const assertArraysEqual = function(a, b) {
   }
 };
 
+module.exports = assertArraysEqual;
+
 const assertEqual = function(actual, expected) {
   if (actual !== expected) {
     return false;
@@ -21,5 +23,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+//assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+//assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
